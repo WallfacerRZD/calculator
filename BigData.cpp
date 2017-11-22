@@ -1,4 +1,3 @@
-#include "stdafx.h"
 #include"BigData.h"
 #include<sstream>
 #include<algorithm>
@@ -27,7 +26,7 @@ BigData::BigData(const string &data) {
 
 }
 
-BigData DoAdd(const BigData &lhs, const BigData &rhs) {					//Õý¼ÓÕý
+BigData DoAdd(const BigData &lhs, const BigData &rhs) {					//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	int carry = 0;
 	auto lhs_beg = lhs.data_.crbegin();
 	auto rhs_beg = rhs.data_.crbegin();
@@ -51,7 +50,7 @@ BigData DoAdd(const BigData &lhs, const BigData &rhs) {					//Õý¼ÓÕý
 }
 
 
-BigData DoSubtraction(const BigData &lhs, const BigData &rhs) {		//Õý(´ó) - Õý(Ð¡)
+BigData DoSubtraction(const BigData &lhs, const BigData &rhs) {		//ï¿½ï¿½(ï¿½ï¿½) - ï¿½ï¿½(Ð¡)
 	auto lhs_beg = lhs.data_.crbegin();
 	auto rhs_beg = rhs.data_.crbegin();
 	auto lhs_end = lhs.data_.crend();
@@ -84,7 +83,7 @@ BigData DoSubtraction(const BigData &lhs, const BigData &rhs) {		//Õý(´ó) - Õý(Ð
 	return result;
 }
 
-BigData DoMultiply(const BigData &lhs, const BigData &rhs) {		//Õý(¶àÎ»)*Õý(Ò»Î»)
+BigData DoMultiply(const BigData &lhs, const BigData &rhs) {		//ï¿½ï¿½(ï¿½ï¿½Î»)*ï¿½ï¿½(Ò»Î»)
 	auto lhs_beg = lhs.data_.crbegin();
 	auto lhs_end = lhs.data_.crend();
 	auto rhs_beg = rhs.data_.crbegin();
@@ -262,7 +261,7 @@ const BigData operator*(const BigData &lhs, const BigData &rhs) {
 
 const BigData operator/(const BigData &lhs, const BigData &rhs) {
 	if (rhs == BigData("0")) {
-		std::cout << "³ýÊý²»ÄÜÎª0" << std::endl;
+		std::cout << "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îª0" << std::endl;
 		exit(1);
 	}
 	if (lhs == BigData("0")) {
